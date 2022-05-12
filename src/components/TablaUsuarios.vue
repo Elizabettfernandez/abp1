@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Tabla de usuarios
+      Tabla de usuarios hola
     </p>
     <h3>Installed CLI Plugins</h3>
     <table class="table">
@@ -28,11 +28,16 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-}
+  data(){
+    return{
+      nombre: 'Miguel',
+      apellido: 'Fernández',
+      fechadenacimiento: '' ,
+      edad: 58,
+    
+  }
+  }, 
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
