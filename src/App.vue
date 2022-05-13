@@ -1,7 +1,22 @@
 <template>
+
+  <TablaUsuarios/>
     <router-view/>
 </template>
 
+
+<script>
+
+  import Tabla from './components/TablaUsuarios.vue'
+  
+  export default {
+  name: 'App',
+  components: {
+    TablaUsuarios
+  }
+  }
+  
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
