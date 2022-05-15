@@ -1,10 +1,8 @@
 <template>
 <div class="container mt-4">
-  <h1>Tabla de usuarios</h1>
-<table class="table">
+<table class="table" >
   <thead>
     <tr>
-      <th scope="col">N°</th>
       <th scope="col">Nombre</th>
       <th scope="col">Apellido</th>
       <th scope="col">Fecha de nacimiento</th>
@@ -12,12 +10,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>{{this.usuarios.nombre}}</td>
-      <td>{{this.usuarios.apellido}}</td>
-      <td>{{this.usuarios.fechadenacimiento}}</td>
-      <td>{{this.usuarios.edad}}</td>
+    <tr v-for="item in usuarios" :key="item">
+      <td>{{item.nombre}}</td>
+      <td>{{item.apellido}}</td>
+      <td>{{item.fechadenacimiento}}</td>
+      <td>{{item.edad}}</td>
     </tr>
   </tbody>
 </table>
@@ -30,22 +27,31 @@ export default {
   name: 'Tabla',
       data(){
         return {
-        usuarios : 
-          {
+        usuarios : [{
              nombre : 'Miguel',
              apellido : 'Fernández',
              fechadenacimiento : '16/12/1999',
              edad : 23,
             },
-        }  
-      },
-      
-};
+            
+            {
+             nombre : 'Claudia',
+             apellido : 'Perez',
+             fechadenacimiento : '17/02/1987',
+             edad : 35,
+            },
+           
+           {
+             nombre : 'Ignacia',
+             apellido : 'Olivares',
+             fechadenacimiento : '04/09/2011',
+             edad : 10,
+            }
+        ],
+      }
+    },
+  };
 
 </script>
 
-<style>
-h1{
-  text-align: center;
-}
-</style>
+<style></style>

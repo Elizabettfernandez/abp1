@@ -1,32 +1,22 @@
 <template>
-<!-- <div class="container mt-3">
-  <div class="grid">
-    <div class="row">
-      <div class="col">
-        <p class="h3 text-success fw-bold">Lista de usuarios</p>
-          
-        </div>
-      </div>
-    </div>
- </div> -->
-
-
-<Tabla/>
+ <div id="app">
+  <b-container>  
+<HomeView />
+  </b-container>
+ </div>
 </template>
 
 
 <script>
-  import Tabla from './components/Tabla.vue'
+  import HomeView from "./views/HomeView.vue"
   
   export default {
-  name: 'App',
-  components: {
-    Tabla
+    name: "App",
+    components: {
+      HomeView
   }
   };
   
 </script>
 
-<style>
-
-</style>
+<style></style>
